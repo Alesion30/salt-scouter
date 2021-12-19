@@ -1,6 +1,6 @@
 {
-  "name": "flapp",
-  "short_name": "flapp",
+  "name": "salt_scouter",
+  "short_name": "salt_scouter",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#0175C2",

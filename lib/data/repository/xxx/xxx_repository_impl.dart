@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:flapp/data/model/result/result.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:salt_scouter/data/model/result/result.dart';
 
 import 'xxx_repository.dart';
 

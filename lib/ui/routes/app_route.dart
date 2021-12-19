@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flapp/ui/routes/route_path.dart';
-import 'package:flapp/ui/xxx/xxx_page.dart';
+import 'package:salt_scouter/ui/routes/route_path.dart';
+import 'package:salt_scouter/ui/xxx/xxx_page.dart';
 
 @AdaptiveAutoRouter(
   replaceInRouteName: 'Page,Route',

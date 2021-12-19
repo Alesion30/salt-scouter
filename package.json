@@ -1,8 +1,8 @@
 {
-  "name": "flapp",
+  "name": "salt_scouter",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Alesion30/flapp.git",
+  "repository": "https://github.com/Alesion30/salt_scouter.git",
   "author": "Yuta Ohira <alesion90@gmail.com>",
   "license": "MIT",
   "devDependencies": {

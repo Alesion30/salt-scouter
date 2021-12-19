@@ -1,6 +1,6 @@
-import 'package:flapp/data/repository/xxx/xxx_repository.dart';
-import 'package:flapp/data/repository/xxx/xxx_repository_impl.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:salt_scouter/data/repository/xxx/xxx_repository.dart';
+import 'package:salt_scouter/data/repository/xxx/xxx_repository_impl.dart';
 
 import 'xxx_state.dart';
 
