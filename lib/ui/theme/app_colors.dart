@@ -14,6 +14,8 @@ class AppColors {
     required this.onSurface,
     required this.error,
     required this.onError,
+    required this.scouter,
+    required this.onScouter,
   });
 
   factory AppColors.light() {
@@ -30,6 +32,8 @@ class AppColors {
       onSurface: Color(0xFF000000),
       error: Color(0xFFB00020),
       onError: Color(0xFFFFFFFF),
+      scouter: Color(0x7302b25f),
+      onScouter: Color(0xFFffff00),
     );
   }
 
@@ -47,6 +51,8 @@ class AppColors {
       onSurface: Color(0xFF000000),
       error: Color(0xFFB00020),
       onError: Color(0xFFFFFFFF),
+      scouter: Color(0x7302b25f),
+      onScouter: Color(0xFFffff00),
     );
   }
 
@@ -63,4 +69,8 @@ class AppColors {
   final Color onSurface;
   final Color error;
   final Color onError;
+
+  // カスタム
+  final Color scouter;
+  final Color onScouter;
 }
