@@ -7,5 +7,6 @@ part 'scouter_state.freezed.dart';
 class ScouterState with _$ScouterState {
   const factory ScouterState({
     CameraController? controller,
+    @Default(true) bool isPause, // カメラが停止しているかどうか
   }) = _ScouterState;
 }

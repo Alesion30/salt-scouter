@@ -17,9 +17,10 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$ScouterStateTearOff {
   const _$ScouterStateTearOff();
 
-  _ScouterState call({CameraController? controller}) {
+  _ScouterState call({CameraController? controller, bool isPause = true}) {
     return _ScouterState(
       controller: controller,
+      isPause: isPause,
     );
   }
 }
@@ -30,6 +31,7 @@ const $ScouterState = _$ScouterStateTearOff();
 /// @nodoc
 mixin _$ScouterState {
   CameraController? get controller => throw _privateConstructorUsedError;
+  bool get isPause => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ScouterStateCopyWith<ScouterState> get copyWith =>
@@ -41,7 +43,7 @@ abstract class $ScouterStateCopyWith<$Res> {
   factory $ScouterStateCopyWith(
           ScouterState value, $Res Function(ScouterState) then) =
       _$ScouterStateCopyWithImpl<$Res>;
-  $Res call({CameraController? controller});
+  $Res call({CameraController? controller, bool isPause});
 }
 
 /// @nodoc
@@ -55,12 +57,17 @@ class _$ScouterStateCopyWithImpl<$Res> implements $ScouterStateCopyWith<$Res> {
   @override
   $Res call({
     Object? controller = freezed,
+    Object? isPause = freezed,
   }) {
     return _then(_value.copyWith(
       controller: controller == freezed
           ? _value.controller
           : controller // ignore: cast_nullable_to_non_nullable
               as CameraController?,
+      isPause: isPause == freezed
+          ? _value.isPause
+          : isPause // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -72,7 +79,7 @@ abstract class _$ScouterStateCopyWith<$Res>
           _ScouterState value, $Res Function(_ScouterState) then) =
       __$ScouterStateCopyWithImpl<$Res>;
   @override
-  $Res call({CameraController? controller});
+  $Res call({CameraController? controller, bool isPause});
 }
 
 /// @nodoc
@@ -88,12 +95,17 @@ class __$ScouterStateCopyWithImpl<$Res> extends _$ScouterStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? controller = freezed,
+    Object? isPause = freezed,
   }) {
     return _then(_ScouterState(
       controller: controller == freezed
           ? _value.controller
           : controller // ignore: cast_nullable_to_non_nullable
               as CameraController?,
+      isPause: isPause == freezed
+          ? _value.isPause
+          : isPause // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -101,14 +113,17 @@ class __$ScouterStateCopyWithImpl<$Res> extends _$ScouterStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_ScouterState implements _ScouterState {
-  const _$_ScouterState({this.controller});
+  const _$_ScouterState({this.controller, this.isPause = true});
 
   @override
   final CameraController? controller;
+  @JsonKey()
+  @override
+  final bool isPause;
 
   @override
   String toString() {
-    return 'ScouterState(controller: $controller)';
+    return 'ScouterState(controller: $controller, isPause: $isPause)';
   }
 
   @override
@@ -117,12 +132,15 @@ class _$_ScouterState implements _ScouterState {
         (other.runtimeType == runtimeType &&
             other is _ScouterState &&
             const DeepCollectionEquality()
-                .equals(other.controller, controller));
+                .equals(other.controller, controller) &&
+            const DeepCollectionEquality().equals(other.isPause, isPause));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(controller));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(controller),
+      const DeepCollectionEquality().hash(isPause));
 
   @JsonKey(ignore: true)
   @override
@@ -131,10 +149,13 @@ class _$_ScouterState implements _ScouterState {
 }
 
 abstract class _ScouterState implements ScouterState {
-  const factory _ScouterState({CameraController? controller}) = _$_ScouterState;
+  const factory _ScouterState({CameraController? controller, bool isPause}) =
+      _$_ScouterState;
 
   @override
   CameraController? get controller;
+  @override
+  bool get isPause;
   @override
   @JsonKey(ignore: true)
   _$ScouterStateCopyWith<_ScouterState> get copyWith =>

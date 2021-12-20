@@ -20,12 +20,40 @@ class ScouterViewModel extends StateNotifier<AsyncValue<ScouterState>> {
   Future<void> load() async {
     try {
       final cameras = await availableCameras();
-      final controller = CameraController(cameras[0], ResolutionPreset.medium);
+      final controller = CameraController(
+        cameras.first,
+        ResolutionPreset.medium,
+      );
       await controller.initialize();
       state = AsyncValue.data(
         ScouterState(
           controller: controller,
+          isPause: false,
         ),
+      );
+    } catch (e) {
+      state = AsyncValue.error(e);
+    }
+  }
+
+  // カメラ停止
+  Future<void> pause() async {
+    try {
+      await state.value!.controller!.pausePreview();
+      state = AsyncValue.data(
+        state.value!.copyWith(isPause: true),
+      );
+    } catch (e) {
+      state = AsyncValue.error(e);
+    }
+  }
+
+  // カメラ再開
+  Future<void> resume() async {
+    try {
+      await state.value!.controller!.resumePreview();
+      state = AsyncValue.data(
+        state.value!.copyWith(isPause: false),
       );
     } catch (e) {
       state = AsyncValue.error(e);
