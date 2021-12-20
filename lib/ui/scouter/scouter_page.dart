@@ -85,18 +85,25 @@ class ScouterPage extends HookConsumerWidget {
           ),
         );
       },
-      error: (e, msg) => Text(e.toString()),
-      loading: () {
-        return Scaffold(
-          body: SafeArea(
-            child: Center(
-              child: CircularProgressIndicator(
-                color: theme.appColors.primary,
-              ),
+      error: (e, msg) => Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: Text(
+              e.toString(),
+              style: theme.textTheme.h30,
             ),
           ),
-        );
-      },
+        ),
+      ),
+      loading: () => Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: CircularProgressIndicator(
+              color: theme.appColors.primary,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
