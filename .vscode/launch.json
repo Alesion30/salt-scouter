@@ -5,6 +5,7 @@
       "name": "run dev",
       "request": "launch",
       "type": "dart",
+      "flutterMode": "debug",
       "program": "lib/main.dart",
       "args": ["--dart-define=FLAVOR=dev"]
     },
@@ -12,6 +13,7 @@
       "name": "run dev (with Device Preview)",
       "request": "launch",
       "type": "dart",
+      "flutterMode": "debug",
       "program": "lib/main.dart",
       "args": ["--dart-define=FLAVOR=dev", "--dart-define=PREVIEW=true"]
     },
@@ -19,6 +21,7 @@
       "name": "run prod",
       "request": "launch",
       "type": "dart",
+      "flutterMode": "release",
       "program": "lib/main.dart",
       "args": ["--dart-define=FLAVOR=prod"]
     }
