@@ -38,18 +38,16 @@ class AppRouter extends _i3.RootStackRouter {
       ];
 }
 
-/// generated route for
-/// [_i1.XXXPage]
+/// generated route for [_i1.XXXPage]
 class XXXRoute extends _i3.PageRouteInfo<void> {
-  const XXXRoute() : super(XXXRoute.name, path: '/xxx');
+  const XXXRoute() : super(name, path: '/xxx');
 
   static const String name = 'XXXRoute';
 }
 
-/// generated route for
-/// [_i2.ScouterPage]
+/// generated route for [_i2.ScouterPage]
 class ScouterRoute extends _i3.PageRouteInfo<void> {
-  const ScouterRoute() : super(ScouterRoute.name, path: '/scouter');
+  const ScouterRoute() : super(name, path: '/scouter');
 
   static const String name = 'ScouterRoute';
 }

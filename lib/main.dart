@@ -5,6 +5,7 @@ import 'package:enum_to_string/enum_to_string.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:salt_scouter/foundation/constants.dart';
@@ -27,6 +28,11 @@ Future<void> main() async {
       msg: "flavor: ${EnumToString.convertToString(Constants.flavor)}",
     );
   }
+
+  // 縦向きOnly
+  await SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp],
+  );
 
   runZonedGuarded(
     () => runApp(
